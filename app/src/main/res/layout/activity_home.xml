@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backgroundimage"
+    tools:context=".HomeActivity">
+
+    <TextView
+        android:id="@+id/image_encryption"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/opensanssemibold"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:text="IMAGE ENCRYPTION"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/take_picture_card"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="40dp"
+        android:elevation="15dp"
+        app:cardCornerRadius="15dp"
+        app:layout_constraintEnd_toEndOf="@+id/image_encryption"
+        app:layout_constraintStart_toStartOf="@+id/image_encryption"
+        app:layout_constraintTop_toBottomOf="@+id/image_encryption">
+
+        <ImageView
+            android:id="@+id/camera_icon"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:transitionName="@string/transition_camera"
+            android:layout_gravity="center"
+            android:background="@drawable/ic_camera" />
+
+
+    </android.support.v7.widget.CardView>
+
+    <TextView
+        android:id="@+id/take_a_photo_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Take a picture"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:fontFamily="@font/opensanssemibold"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/take_picture_card"
+        app:layout_constraintStart_toStartOf="@+id/take_picture_card"
+        app:layout_constraintTop_toBottomOf="@+id/take_picture_card" />
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/upload_picture_card"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        app:layout_constraintDimensionRatio="1:1"
+        android:layout_marginTop="40dp"
+        android:elevation="5dp"
+        app:cardCornerRadius="15dp"
+        app:layout_constraintEnd_toEndOf="@+id/take_a_photo_text"
+        app:layout_constraintStart_toStartOf="@+id/take_a_photo_text"
+        app:layout_constraintTop_toBottomOf="@+id/take_a_photo_text">
+
+        <ImageView
+            android:id="@+id/upload_icon"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:transitionName="@string/transition_gallery"
+            android:background="@drawable/ic_gallery"
+            />
+
+
+    </android.support.v7.widget.CardView>
+
+    <TextView
+        android:id="@+id/upload_image_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Upload image"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:fontFamily="@font/opensanssemibold"
+        app:layout_constraintEnd_toEndOf="@+id/upload_picture_card"
+        app:layout_constraintStart_toStartOf="@+id/upload_picture_card"
+        app:layout_constraintTop_toBottomOf="@+id/upload_picture_card" />
+
+</android.support.constraint.ConstraintLayout>
